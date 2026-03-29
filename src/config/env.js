@@ -10,7 +10,7 @@ if (!process.env.PORT) {
 }
 if (!process.env.MONGODB_URI) {
     // console.error("Error: MONGODB_URI environment variable is not defined.");
-    AppError("MONGODB_URI environment variable is not defined.");
+    throw new AppError("MONGODB_URI environment variable is not defined.");
     process.exit(1); // Exit the process with an error code
 }
 const config = {
